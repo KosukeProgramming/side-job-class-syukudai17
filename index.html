@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宿題16</title>
+    <title>宿題17</title>
     <!-- Googleフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,36 +13,89 @@
     <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/7ef3657719.js" crossorigin="anonymous"></script>
     <!-- スタイルシート -->
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
-    <div class="subject">
-        <div class="subject__inner">
-
-            <h3 class="subject__title">日常の業務で<br class="br-sp">こんな課題はありませんか？</h3>
-            
-            <ul class="subject__list">
-                <li class="subject__item"><span class="subject__item-text">参加するメンバーの候補日作成で時間が<br>かかってしまう。</span></li>
-        
-                <li class="subject__item"><span class="subject__item-text">提案した候補日が合わず、候補日作成を<br>やり直しするのに手間がかかる。</span></li>
-        
-                <li class="subject__item"><span class="subject__item-text">WEB会議URLのミスにより当日開始が<br>スムーズにできない。</span></li>
-        
-                <li class="subject__item"><span class="subject__item-text">確定した日程のスケジュール登録漏れや登録<br>ミスにより、ダブルブッキングが発生する。</span></li>
-            </ul>
-            <!-- /.subject__list -->
-
+    <main class="main">
+        <h1 class="title">完成！！！！</h1>
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer-menu__inner">
+                <div class="footer-menu-content__inner">
+                    <p class="logo">TAKEBAYASHI</p>
+                    <dl class="footer-menu__list-l">
+                        <dt class="footer-menu__item"><span class="footer__icon"></span>ぽちPAYとは</dt>
+                        <dd class="footer-menu__item-sub"><span class="footer__icon"></span>ぽちPAYでできること<a href=""></a></dd>
+                        <dd class="footer-menu__item-sub"><span class="footer__icon"></span>利用シーン<a href=""></a></dd>
+                        <dd class="footer-menu__item-sub"><span class="footer__icon"></span>決済の流れ<a href=""></a></dd>
+                        <dd class="footer-menu__item-sub"><span class="footer__icon"></span>導入事例<a href=""></a></dd>
+                    </dl>
+                    <ul class="footer-menu__list-r">
+                        <li class="footer-menu__item"><span class="footer__icon"></span>料金プラン<a href=""></a></li>
+                        <li class="footer-menu__item"><span class="footer__icon"></span>よくあるご質問<a href=""></a></li>
+                        <li class="footer-menu__item"><span class="footer__icon"></span>導入までの流れ<a href=""></a></li>
+                        <li class="footer-menu__item"><span class="footer__icon"></span>導入ガイド<a href=""></a></li>
+                    </ul>
+                    <div class="footer-menu__cta">
+                        <a href="#" class="button">無料で<br class="br-sp">はじめる<span class="footer__icon"></span></a>
+                        <a href="#" class="button"><i class="fa-regular fa-envelope"></i>質問する</a><a href="#" class="button"><i class="fa-solid fa-download"></i>資料請求</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.footer-menu__inner -->
+            <div class="footer-menu-down__inner">
+                <div class="footer-menu-content-down__inner">
+                    <ul class="footer-menu-down__list">
+                        <li class="footer-menu-down__item"><a href="">お知らせ</a></li>
+                        <li class="footer-menu-down__item"><a href="">電子契約について</a></li>
+                        <li class="footer-menu-down__item"><a href="">紹介代理店募集</a></li>
+                        <li class="footer-menu-down__item"><a href="" target="_blank">会社概要<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                        <li class="footer-menu-down__item"><a href="" target="_blank">プライバシーポリシー<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    </ul>
+                    <small class="copyright">Copyright &copy; ZEUS CO.,LTD.All Rights Reserved.</small>
+                </div>
+                <!-- /.footer-menu-content-down__inner -->
+            </div>
+            <!-- /.footer-menu-down__inner -->
         </div>
-        <!-- /.subject__inner -->
+        <!-- /.footer__inner -->
+    </footer>
+    <!-- /.footer -->
 
-    </div>
-    <!-- /.subject -->
-
+    <!-- スクロールボタン -->
+    <a href='#' class='scroll-button'>
+        <span class='scroll-button-arrow'></span>
+    </a>
     
+    <!-- smooth-scroll.jsの読み込み -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    
+    <script>
+        // スクロールボタン
+       "use strict";
 
+        let windowHeight=window.outerHeight;
+        const scrollBtn=document.querySelector(".scroll-button");
+
+        window.addEventListener("scroll", function() {
+                window.scrollY < windowHeight ? scrollBtn.classList.remove("active") : scrollBtn.classList.add("active");
+            }
+
+        );
+
+        let scroll=new SmoothScroll('a[href*="#"]', {
+                speed: 300,
+                easing:'easeInOut',
+            }
+
+        );
+
+    </script>
+    
 </body>
 
 </html>

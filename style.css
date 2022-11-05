@@ -33,6 +33,7 @@
     z-index: 100;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s ease;
 }
 .scroll-button-arrow {
     display: inline-block;
@@ -51,7 +52,7 @@
 * main
 **********************************/
 .main {
-    height: 1200px;
+    height: 1500px;
 }
 /**********************************
 * footer
